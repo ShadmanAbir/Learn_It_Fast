@@ -1,0 +1,13 @@
+{
+  "name": "invalid-fixture",
+  "language": "german",
+  "packageVersion": "0.1",
+  "files": {
+    "units": ["units.json"],
+    "concepts": ["concepts.json"],
+    "exercises": ["exercises.json"],
+    "blueprints": ["blueprints.json"],
+    "lexicon": ["lexicon.json"],
+    "scenarios": ["missing.json"]
+  }
+}

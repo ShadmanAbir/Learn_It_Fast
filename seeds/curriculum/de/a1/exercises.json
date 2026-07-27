@@ -1,0 +1,442 @@
+{
+  "conventions": {
+    "answerKey": {
+      "multiple_choice": "exact text of the correct option",
+      "cloze": "expected fill for the ___ gap (case-only mismatch scores 0.5)",
+      "matching": "left=right pairs joined by '|', order-independent; options stay empty — presentation is derived from the key at instantiation",
+      "ordering": "tokens in correct sequence joined by '|'; options carry the shuffled tokens"
+    }
+  },
+  "exercises": [
+    {
+      "code": "ex.a1.greeting.mc-morning",
+      "type": "multiple_choice",
+      "concepts": ["func.greeting.basic"],
+      "difficulty": 1,
+      "stem": "Es ist 8 Uhr morgens. Welcher Gruß passt?",
+      "options": ["Guten Morgen!", "Guten Abend!", "Gute Nacht!", "Tschüss!"],
+      "answerKey": "Guten Morgen!",
+      "explanation": "Before ~11:00 you greet with 'Guten Morgen'."
+    },
+    {
+      "code": "ex.a1.greeting.cloze-nacht",
+      "type": "cloze",
+      "concepts": ["func.greeting.basic"],
+      "difficulty": 1,
+      "stem": "Es ist spät und du gehst schlafen: ___ Nacht!",
+      "options": [],
+      "answerKey": "Gute",
+      "explanation": "'Nacht' is feminine, so no -n: 'Gute Nacht'.",
+      "errorCode": "err.gender.adjective-greeting"
+    },
+    {
+      "code": "ex.a1.greeting.match-english",
+      "type": "matching",
+      "concepts": ["func.greeting.basic"],
+      "difficulty": 1,
+      "stem": "Ordne die Grüße ihrer Bedeutung zu.",
+      "options": [],
+      "answerKey": "Guten Morgen=good morning|Gute Nacht=good night|Tschüss=bye|Auf Wiedersehen=goodbye",
+      "explanation": "'Auf Wiedersehen' is the formal farewell, 'Tschüss' the informal one."
+    },
+    {
+      "code": "ex.a1.anrede.mc-stranger",
+      "type": "multiple_choice",
+      "concepts": ["cult.anrede.du-sie"],
+      "difficulty": 1,
+      "stem": "Du sprichst mit einer fremden Frau im Amt. Was sagst du?",
+      "options": ["Können Sie mir helfen?", "Kannst du mir helfen?"],
+      "answerKey": "Können Sie mir helfen?",
+      "explanation": "Strangers and officials get the formal 'Sie'.",
+      "errorCode": "err.register.du-sie"
+    },
+    {
+      "code": "ex.a1.anrede.match-person",
+      "type": "matching",
+      "concepts": ["cult.anrede.du-sie"],
+      "difficulty": 1,
+      "stem": "du oder Sie? Ordne zu.",
+      "options": [],
+      "answerKey": "dein Bruder=du|Herr Schmidt=Sie|ein Kind=du|die Chefin=Sie",
+      "explanation": "Family and children take 'du'; surnames and superiors take 'Sie'."
+    },
+    {
+      "code": "ex.a1.pronoun.cloze-ich",
+      "type": "cloze",
+      "concepts": ["gram.pronoun.personal.nom"],
+      "difficulty": 1,
+      "stem": "___ bin müde. (I)",
+      "options": [],
+      "answerKey": "Ich",
+      "explanation": "'ich' is only capitalized at the start of a sentence."
+    },
+    {
+      "code": "ex.a1.pronoun.mc-anna",
+      "type": "multiple_choice",
+      "concepts": ["gram.pronoun.personal.nom"],
+      "difficulty": 1,
+      "stem": "Das ist Anna. ___ ist Ärztin.",
+      "options": ["Sie", "Er", "Es", "Du"],
+      "answerKey": "Sie",
+      "explanation": "Anna is female → 'sie' (capitalized here as sentence start).",
+      "errorCode": "err.pronoun.sie-capitalization"
+    },
+    {
+      "code": "ex.a1.pronoun.match-english",
+      "type": "matching",
+      "concepts": ["gram.pronoun.personal.nom"],
+      "difficulty": 1,
+      "stem": "Ordne die Pronomen ihrer Bedeutung zu.",
+      "options": [],
+      "answerKey": "ich=I|du=you (informal)|wir=we|ihr=you (plural)",
+      "explanation": "'ihr' addresses several people you know informally."
+    },
+    {
+      "code": "ex.a1.sein.cloze-bin",
+      "type": "cloze",
+      "concepts": ["gram.verb.sein.praesens"],
+      "difficulty": 2,
+      "stem": "Ich ___ müde.",
+      "options": [],
+      "answerKey": "bin",
+      "explanation": "ich bin, du bist, er/sie/es ist."
+    },
+    {
+      "code": "ex.a1.sein.match-forms",
+      "type": "matching",
+      "concepts": ["gram.verb.sein.praesens"],
+      "difficulty": 2,
+      "stem": "Ordne die Form von 'sein' zu.",
+      "options": [],
+      "answerKey": "ich=bin|du=bist|er=ist|wir=sind",
+      "explanation": "'sein' is completely irregular — learn the table by heart."
+    },
+    {
+      "code": "ex.a1.sein.mc-profession",
+      "type": "multiple_choice",
+      "concepts": ["gram.verb.sein.praesens"],
+      "difficulty": 2,
+      "stem": "Welcher Satz ist richtig?",
+      "options": ["Ich bin Lehrer.", "Ich bin ein Lehrer."],
+      "answerKey": "Ich bin Lehrer.",
+      "explanation": "Professions after 'sein' take no article.",
+      "errorCode": "err.article.profession"
+    },
+    {
+      "code": "ex.a1.regular.cloze-wohnst",
+      "type": "cloze",
+      "concepts": ["gram.verb.praesens.regular"],
+      "difficulty": 2,
+      "stem": "Du ___ in Hamburg. (wohnen)",
+      "options": [],
+      "answerKey": "wohnst",
+      "explanation": "2nd person singular takes -st: du wohnst.",
+      "errorCode": "err.verb.conjugation-ending"
+    },
+    {
+      "code": "ex.a1.regular.mc-kommt",
+      "type": "multiple_choice",
+      "concepts": ["gram.verb.praesens.regular"],
+      "difficulty": 2,
+      "stem": "Er ___ aus Italien.",
+      "options": ["kommt", "komme", "kommst", "kommen"],
+      "answerKey": "kommt",
+      "explanation": "3rd person singular takes -t: er kommt."
+    },
+    {
+      "code": "ex.a1.regular.match-machen",
+      "type": "matching",
+      "concepts": ["gram.verb.praesens.regular"],
+      "difficulty": 2,
+      "stem": "Ordne die Form von 'machen' zu.",
+      "options": [],
+      "answerKey": "ich=mache|du=machst|er=macht|wir=machen",
+      "explanation": "Stem 'mach-' + ending: -e, -st, -t, -en."
+    },
+    {
+      "code": "ex.a1.v2.order-heute",
+      "type": "ordering",
+      "concepts": ["gram.wordorder.v2"],
+      "difficulty": 2,
+      "stem": "Bilde einen Satz. Beginne mit 'Heute'.",
+      "options": ["ich", "Deutsch", "Heute", "lerne"],
+      "answerKey": "Heute|lerne|ich|Deutsch",
+      "explanation": "When 'Heute' comes first, the verb stays second and the subject moves behind it.",
+      "errorCode": "err.wordorder.v2"
+    },
+    {
+      "code": "ex.a1.v2.order-morgen",
+      "type": "ordering",
+      "concepts": ["gram.wordorder.v2"],
+      "difficulty": 2,
+      "stem": "Bilde einen Satz. Beginne mit 'Morgen'.",
+      "options": ["meine", "Morgen", "Mutter", "kommt"],
+      "answerKey": "Morgen|kommt|meine|Mutter",
+      "explanation": "Time phrase first → conjugated verb second → subject third.",
+      "errorCode": "err.wordorder.v2"
+    },
+    {
+      "code": "ex.a1.v2.mc-correct",
+      "type": "multiple_choice",
+      "concepts": ["gram.wordorder.v2"],
+      "difficulty": 2,
+      "stem": "Welcher Satz ist richtig?",
+      "options": ["Heute lerne ich Deutsch.", "Heute ich lerne Deutsch."],
+      "answerKey": "Heute lerne ich Deutsch.",
+      "explanation": "The conjugated verb must be the second element.",
+      "errorCode": "err.wordorder.v2"
+    },
+    {
+      "code": "ex.a1.wfragen.mc-woher",
+      "type": "multiple_choice",
+      "concepts": ["gram.question.wfragen"],
+      "difficulty": 2,
+      "stem": "___ kommst du? — Aus Polen.",
+      "options": ["Woher", "Wo", "Wer", "Wann"],
+      "answerKey": "Woher",
+      "explanation": "Origin asks 'woher' (where from); 'wo' asks for a location.",
+      "errorCode": "err.question.wo-woher"
+    },
+    {
+      "code": "ex.a1.wfragen.cloze-wo",
+      "type": "cloze",
+      "concepts": ["gram.question.wfragen"],
+      "difficulty": 2,
+      "stem": "___ wohnst du? — In Berlin.",
+      "options": [],
+      "answerKey": "Wo",
+      "explanation": "'wo' asks for the place where someone lives."
+    },
+    {
+      "code": "ex.a1.wfragen.order-wann",
+      "type": "ordering",
+      "concepts": ["gram.question.wfragen"],
+      "difficulty": 2,
+      "stem": "Bilde eine Frage.",
+      "options": ["der", "beginnt", "Wann", "Kurs"],
+      "answerKey": "Wann|beginnt|der|Kurs",
+      "explanation": "Question word first, verb second, subject third."
+    },
+    {
+      "code": "ex.a1.introduce.order-lena",
+      "type": "ordering",
+      "concepts": ["func.introduce.self"],
+      "difficulty": 2,
+      "stem": "Bilde einen Satz.",
+      "options": ["aus", "Ich", "Polen", "heiße", "komme", "und", "Lena"],
+      "answerKey": "Ich|heiße|Lena|und|komme|aus|Polen",
+      "explanation": "The classic self-introduction: name first, then origin."
+    },
+    {
+      "code": "ex.a1.introduce.mc-heisse",
+      "type": "multiple_choice",
+      "concepts": ["func.introduce.self"],
+      "difficulty": 2,
+      "stem": "Welcher Satz ist richtig?",
+      "options": ["Ich heiße Lena.", "Ich heiße ist Lena.", "Ich bin heiße Lena."],
+      "answerKey": "Ich heiße Lena.",
+      "explanation": "'heißen' is a full verb — no extra 'ist'.",
+      "errorCode": "err.verb.double-verb"
+    },
+    {
+      "code": "ex.a1.artdef.mc-maedchen",
+      "type": "multiple_choice",
+      "concepts": ["gram.gender.articles.def"],
+      "difficulty": 2,
+      "stem": "___ Mädchen spielt im Garten.",
+      "options": ["Das", "Die", "Der"],
+      "answerKey": "Das",
+      "explanation": "Words in -chen are always neuter: das Mädchen.",
+      "errorCode": "err.gender.wrong-article"
+    },
+    {
+      "code": "ex.a1.artdef.match-gender",
+      "type": "matching",
+      "concepts": ["gram.gender.articles.def"],
+      "difficulty": 2,
+      "stem": "der, die oder das? Ordne zu.",
+      "options": [],
+      "answerKey": "Tisch=der|Lampe=die|Kind=das|Nacht=die",
+      "explanation": "Gender is mostly arbitrary — always learn the noun with its article."
+    },
+    {
+      "code": "ex.a1.artdef.cloze-tisch",
+      "type": "cloze",
+      "concepts": ["gram.gender.articles.def"],
+      "difficulty": 2,
+      "stem": "___ Tisch ist neu.",
+      "options": [],
+      "answerKey": "Der",
+      "explanation": "'Tisch' is masculine: der Tisch."
+    },
+    {
+      "code": "ex.a1.artindef.cloze-stuhl",
+      "type": "cloze",
+      "concepts": ["gram.gender.articles.indef"],
+      "difficulty": 2,
+      "stem": "Das ist ___ Stuhl.",
+      "options": [],
+      "answerKey": "ein",
+      "explanation": "der Stuhl → ein Stuhl."
+    },
+    {
+      "code": "ex.a1.artindef.mc-plural",
+      "type": "multiple_choice",
+      "concepts": ["gram.gender.articles.indef"],
+      "difficulty": 2,
+      "stem": "Das sind ___ .",
+      "options": ["Bücher", "eine Bücher", "ein Bücher"],
+      "answerKey": "Bücher",
+      "explanation": "'ein/eine' has no plural — plural indefinite nouns stand alone.",
+      "errorCode": "err.article.indef-plural"
+    },
+    {
+      "code": "ex.a1.artindef.match-eineine",
+      "type": "matching",
+      "concepts": ["gram.gender.articles.indef"],
+      "difficulty": 2,
+      "stem": "ein oder eine? Ordne zu.",
+      "options": [],
+      "answerKey": "Stuhl=ein|Tasche=eine|Buch=ein|Lampe=eine",
+      "explanation": "der/das words take 'ein', die words take 'eine'."
+    },
+    {
+      "code": "ex.a1.plural.match-forms",
+      "type": "matching",
+      "concepts": ["gram.noun.plural.common"],
+      "difficulty": 3,
+      "stem": "Ordne den Plural zu.",
+      "options": [],
+      "answerKey": "der Tisch=die Tische|die Lampe=die Lampen|das Kind=die Kinder|der Apfel=die Äpfel",
+      "explanation": "Main patterns: -e, -(e)n, -er, umlaut only."
+    },
+    {
+      "code": "ex.a1.plural.mc-kind",
+      "type": "multiple_choice",
+      "concepts": ["gram.noun.plural.common"],
+      "difficulty": 3,
+      "stem": "Was ist der Plural von 'das Kind'?",
+      "options": ["die Kinder", "die Kinds", "die Kinden"],
+      "answerKey": "die Kinder",
+      "explanation": "-s plurals are rare (mostly loanwords); Kind takes -er.",
+      "errorCode": "err.noun.plural-form"
+    },
+    {
+      "code": "ex.a1.haben.cloze-hast",
+      "type": "cloze",
+      "concepts": ["gram.verb.haben.praesens"],
+      "difficulty": 2,
+      "stem": "___ du Zeit?",
+      "options": [],
+      "answerKey": "Hast",
+      "explanation": "'haben' is irregular in du/er forms: du hast, er hat.",
+      "errorCode": "err.verb.conjugation-ending"
+    },
+    {
+      "code": "ex.a1.haben.mc-hat",
+      "type": "multiple_choice",
+      "concepts": ["gram.verb.haben.praesens"],
+      "difficulty": 2,
+      "stem": "Er ___ zwei Brüder.",
+      "options": ["hat", "habt", "haben", "hast"],
+      "answerKey": "hat",
+      "explanation": "er/sie/es hat — the -b- disappears."
+    },
+    {
+      "code": "ex.a1.haben.match-forms",
+      "type": "matching",
+      "concepts": ["gram.verb.haben.praesens"],
+      "difficulty": 2,
+      "stem": "Ordne die Form von 'haben' zu.",
+      "options": [],
+      "answerKey": "ich=habe|du=hast|er=hat|ihr=habt",
+      "explanation": "Watch out: du hast, er hat (irregular), but ihr habt."
+    },
+    {
+      "code": "ex.a1.akk.cloze-hund",
+      "type": "cloze",
+      "concepts": ["gram.case.akkusativ.intro"],
+      "difficulty": 3,
+      "stem": "Ich habe ___ Hund. (ein)",
+      "options": [],
+      "answerKey": "einen",
+      "explanation": "Masculine direct objects take -en: einen Hund.",
+      "errorCode": "err.case.akk-masculine"
+    },
+    {
+      "code": "ex.a1.akk.mc-tisch",
+      "type": "multiple_choice",
+      "concepts": ["gram.case.akkusativ.intro"],
+      "difficulty": 3,
+      "stem": "Sie kauft ___ Tisch.",
+      "options": ["den", "der", "das", "dem"],
+      "answerKey": "den",
+      "explanation": "'Tisch' is masculine and here a direct object: der → den.",
+      "errorCode": "err.case.akk-masculine"
+    },
+    {
+      "code": "ex.a1.akk.mc-katze",
+      "type": "multiple_choice",
+      "concepts": ["gram.case.akkusativ.intro"],
+      "difficulty": 3,
+      "stem": "Wir haben ___ Katze.",
+      "options": ["eine", "einen", "ein"],
+      "answerKey": "eine",
+      "explanation": "Feminine articles do not change in the accusative."
+    },
+    {
+      "code": "ex.a1.negation.mc-kein",
+      "type": "multiple_choice",
+      "concepts": ["gram.negation.nicht-kein"],
+      "difficulty": 3,
+      "stem": "Ich habe ___ Auto.",
+      "options": ["kein", "nicht", "keine"],
+      "answerKey": "kein",
+      "explanation": "Nouns with ein/no article are negated with kein; 'Auto' is neuter → kein.",
+      "errorCode": "err.negation.nicht-vs-kein"
+    },
+    {
+      "code": "ex.a1.negation.cloze-nicht",
+      "type": "cloze",
+      "concepts": ["gram.negation.nicht-kein"],
+      "difficulty": 3,
+      "stem": "Er kommt heute ___ .",
+      "options": [],
+      "answerKey": "nicht",
+      "explanation": "Verbs are negated with 'nicht'.",
+      "errorCode": "err.negation.nicht-vs-kein"
+    },
+    {
+      "code": "ex.a1.negation.mc-keine",
+      "type": "multiple_choice",
+      "concepts": ["gram.negation.nicht-kein"],
+      "difficulty": 3,
+      "stem": "Das ist ___ gute Idee.",
+      "options": ["keine", "kein", "nicht"],
+      "answerKey": "keine",
+      "explanation": "'Idee' is feminine → keine.",
+      "errorCode": "err.negation.nicht-vs-kein"
+    },
+    {
+      "code": "ex.a1.janein.order-kommst",
+      "type": "ordering",
+      "concepts": ["gram.question.janein"],
+      "difficulty": 2,
+      "stem": "Bilde eine Ja/Nein-Frage.",
+      "options": ["mit", "du", "Kommst"],
+      "answerKey": "Kommst|du|mit",
+      "explanation": "Yes/no questions start with the conjugated verb.",
+      "errorCode": "err.wordorder.question-verb-first"
+    },
+    {
+      "code": "ex.a1.janein.mc-doch",
+      "type": "multiple_choice",
+      "concepts": ["gram.question.janein"],
+      "difficulty": 2,
+      "stem": "Hast du keine Zeit? — ___, ich habe Zeit!",
+      "options": ["Doch", "Ja", "Nein"],
+      "answerKey": "Doch",
+      "explanation": "'doch' contradicts a negative question."
+    }
+  ]
+}

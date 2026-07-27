@@ -1,0 +1,13 @@
+{
+  "name": "de-curriculum",
+  "language": "de",
+  "packageVersion": "0.1.0",
+  "description": "German curriculum seed package. Phase 1 ships the A1.1 walking-skeleton slice: 2 units, 15 concepts, ~125 core words, 1 checkpoint blueprint.",
+  "files": {
+    "units": ["a1/units.json"],
+    "concepts": ["a1/concepts.json"],
+    "exercises": ["a1/exercises.json"],
+    "blueprints": ["a1/blueprints.json"],
+    "lexicon": ["lexicon/a1-1-core.json"]
+  }
+}

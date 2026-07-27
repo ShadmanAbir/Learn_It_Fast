@@ -1,0 +1,13 @@
+{
+  "defaults": { "level": "Z9" },
+  "entries": [
+    { "lemma": "Tisch", "pos": "noun", "gender": "der", "difficulty": 2,
+      "senses": [ { "meaning": "table", "exampleDe": "Der Tisch.", "exampleEn": "The table.", "topic": "home" } ] },
+    { "lemma": "Tisch", "pos": "noun", "gender": "das", "difficulty": 2,
+      "senses": [ { "meaning": "table again", "exampleDe": "…", "exampleEn": "…", "topic": "home" } ] },
+    { "lemma": "Lampe", "pos": "noun", "difficulty": 99, "frequencyRank": 0,
+      "senses": [] },
+    { "lemma": "schnell", "pos": "adjective", "gender": "die", "separable": true, "difficulty": 1,
+      "senses": [ { "meaning": "fast", "exampleDe": "…", "exampleEn": "…", "topic": "basic" } ] }
+  ]
+}

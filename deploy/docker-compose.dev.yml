@@ -1,0 +1,24 @@
+# Dev overrides: Postgres only, exposed on localhost for `dotnet run` + `npm run dev`.
+# Usage: docker compose -f docker-compose.dev.yml up
+
+name: lif-dev
+
+services:
+  db:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=lif
+      - POSTGRES_USER=lif
+      - POSTGRES_PASSWORD=lif
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lif -d lif"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - lif-dev-db:/var/lib/postgresql/data
+
+volumes:
+  lif-dev-db:

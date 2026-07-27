@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lif.Infrastructure\Lif.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

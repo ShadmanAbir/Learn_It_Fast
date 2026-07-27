@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <!-- References every production assembly to assert the dependency rules of doc 14 §2 -->
+    <ProjectReference Include="..\..\Lif.SharedKernel\Lif.SharedKernel.csproj" />
+    <ProjectReference Include="..\..\Lif.Domain\Lif.Domain.csproj" />
+    <ProjectReference Include="..\..\Lif.Application\Lif.Application.csproj" />
+    <ProjectReference Include="..\..\Lif.Infrastructure\Lif.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Lif.Persistence\Lif.Persistence.csproj" />
+    <ProjectReference Include="..\..\Lif.Api\Lif.Api.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NetArchTest.Rules" />
+  </ItemGroup>
+</Project>

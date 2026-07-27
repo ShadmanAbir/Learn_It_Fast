@@ -1,0 +1,14 @@
+{
+  "blueprints": [
+    {
+      "kind": "checkpoint",
+      "level": "A1.1",
+      "unit": "a1.1-u2",
+      "sections": [
+        { "skill": "grammar", "itemCount": 8, "passPercentage": 75 },
+        { "skill": "vocabulary", "itemCount": 8, "passPercentage": 75 },
+        { "skill": "reading", "itemCount": 4, "passPercentage": 70 }
+      ]
+    }
+  ]
+}

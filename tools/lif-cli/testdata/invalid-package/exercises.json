@@ -1,0 +1,41 @@
+{
+  "exercises": [
+    {
+      "code": "ex.bad.mc",
+      "type": "multiple_choice",
+      "concepts": ["gram.alpha"],
+      "difficulty": 2,
+      "stem": "Pick one.",
+      "options": ["a", "a"],
+      "answerKey": "c",
+      "errorCode": "err.not.declared"
+    },
+    {
+      "code": "ex.bad.cloze",
+      "type": "cloze",
+      "concepts": ["gram.missing"],
+      "difficulty": 2,
+      "stem": "No gap here.",
+      "options": ["x"],
+      "answerKey": "y"
+    },
+    {
+      "code": "ex.bad.matching",
+      "type": "matching",
+      "concepts": ["gram.alpha"],
+      "difficulty": 2,
+      "stem": "Match.",
+      "options": [],
+      "answerKey": "a=1|a=2|broken"
+    },
+    {
+      "code": "ex.bad.ordering",
+      "type": "ordering",
+      "concepts": ["gram.alpha"],
+      "difficulty": 2,
+      "stem": "Order.",
+      "options": ["eins", "zwei"],
+      "answerKey": "eins|zwei|drei"
+    }
+  ]
+}

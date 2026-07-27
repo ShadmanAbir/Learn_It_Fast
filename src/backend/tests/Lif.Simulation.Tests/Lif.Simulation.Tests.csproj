@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <!-- Virtual-student journeys against the real planner/scheduler/assessment stack (NFR-TST-2) -->
+    <ProjectReference Include="..\..\Lif.Application\Lif.Application.csproj" />
+    <!-- Reuses TestWorld + in-memory port fakes; its tests are not re-discovered here. -->
+    <ProjectReference Include="..\Lif.Application.Tests\Lif.Application.Tests.csproj" />
+  </ItemGroup>
+</Project>

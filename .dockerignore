@@ -1,0 +1,12 @@
+# Keep Docker build context lean
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/.vs
+**/TestResults
+**/coverage
+.git
+docs
+deploy/k8s
+*.md

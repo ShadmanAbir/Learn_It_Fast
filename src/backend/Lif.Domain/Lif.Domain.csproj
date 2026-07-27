@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Lif.Domain</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Domain references ONLY SharedKernel (dependency rule 1, doc 14 §2) -->
+    <ProjectReference Include="..\Lif.SharedKernel\Lif.SharedKernel.csproj" />
+  </ItemGroup>
+</Project>

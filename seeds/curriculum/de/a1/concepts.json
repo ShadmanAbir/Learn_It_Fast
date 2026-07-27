@@ -1,0 +1,448 @@
+{
+  "concepts": [
+    {
+      "code": "func.greeting.basic",
+      "kind": "function",
+      "level": "A1.1",
+      "difficulty": 1,
+      "title": "Greetings and farewells",
+      "learningObjective": "Greet someone and say goodbye, matching the time of day and region.",
+      "explanationMarkdown": "**Hallo** and **Tschüss** work almost everywhere. More formal: **Guten Morgen / Guten Tag / Guten Abend** and **Auf Wiedersehen**. In the south you will hear **Grüß Gott**, in the north **Moin**.",
+      "estimatedMinutes": 5,
+      "masteryThreshold": 0.7,
+      "importance": 0.9,
+      "unit": "a1.1-u1",
+      "dependencies": [],
+      "examples": [
+        { "de": "Guten Morgen, Frau Weber!", "en": "Good morning, Ms Weber!", "note": "formal, before ~11:00" },
+        { "de": "Hallo Max, wie geht's?", "en": "Hi Max, how are you?", "note": "informal" },
+        { "de": "Tschüss, bis morgen!", "en": "Bye, see you tomorrow!", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Guten Nacht!",
+          "right": "Gute Nacht!",
+          "explanation": "'Nacht' is feminine, so no -n: 'Gute Nacht'. The -n in 'Guten Morgen/Tag/Abend' comes from masculine accusative.",
+          "errorCode": "err.gender.adjective-greeting"
+        }
+      ],
+      "requiredVocabulary": ["hallo", "tschüss", "der Morgen", "der Tag", "der Abend", "die Nacht", "gut", "auf Wiedersehen", "bis", "morgen"]
+    },
+    {
+      "code": "cult.anrede.du-sie",
+      "kind": "culture",
+      "level": "A1.1",
+      "difficulty": 1,
+      "title": "du or Sie?",
+      "learningObjective": "Choose between informal 'du' and formal 'Sie' in everyday situations.",
+      "explanationMarkdown": "**du** = family, friends, children, students among themselves. **Sie** (always capitalized) = strangers, officials, business. Rule of thumb: adults you don't know get **Sie** until they offer **du**.",
+      "estimatedMinutes": 5,
+      "masteryThreshold": 0.6,
+      "importance": 0.7,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "func.greeting.basic", "type": "supports" }
+      ],
+      "examples": [
+        { "de": "Entschuldigung, können Sie mir helfen?", "en": "Excuse me, can you help me?", "note": "stranger → Sie" },
+        { "de": "Du bist mein bester Freund.", "en": "You are my best friend.", "note": "friend → du" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Hallo Herr Schmidt, wie geht es dir?",
+          "right": "Hallo Herr Schmidt, wie geht es Ihnen?",
+          "explanation": "With 'Herr/Frau + surname' use the formal Sie-forms.",
+          "errorCode": "err.register.du-sie"
+        }
+      ],
+      "requiredVocabulary": ["du", "Sie", "der Herr", "die Frau", "der Freund", "die Entschuldigung"]
+    },
+    {
+      "code": "gram.pronoun.personal.nom",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 1,
+      "title": "Personal pronouns (nominative)",
+      "learningObjective": "Use ich, du, er/sie/es, wir, ihr, sie/Sie as sentence subjects.",
+      "explanationMarkdown": "| Person | Singular | Plural |\n|---|---|---|\n| 1st | ich | wir |\n| 2nd | du | ihr |\n| 3rd | er / sie / es | sie |\n\nFormal **Sie** (capitalized) is used for one or several people.",
+      "estimatedMinutes": 6,
+      "masteryThreshold": 0.8,
+      "importance": 1.0,
+      "unit": "a1.1-u1",
+      "dependencies": [],
+      "examples": [
+        { "de": "Ich komme aus Spanien.", "en": "I come from Spain.", "note": null },
+        { "de": "Sie ist Ärztin.", "en": "She is a doctor.", "note": "sie (lowercase, singular) = she" },
+        { "de": "Wir lernen Deutsch.", "en": "We are learning German.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "sie können mir helfen? (to a stranger)",
+          "right": "Können Sie mir helfen?",
+          "explanation": "Formal 'Sie' is always capitalized; lowercase 'sie' means 'she' or 'they'.",
+          "errorCode": "err.pronoun.sie-capitalization"
+        }
+      ],
+      "requiredVocabulary": ["ich", "du", "er", "sie", "es", "wir", "ihr"]
+    },
+    {
+      "code": "gram.verb.sein.praesens",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "sein — to be (present)",
+      "learningObjective": "Conjugate and use 'sein' to say who or what someone is.",
+      "explanationMarkdown": "**sein** is completely irregular:\n\n| | |\n|---|---|\n| ich **bin** | wir **sind** |\n| du **bist** | ihr **seid** |\n| er/sie/es **ist** | sie/Sie **sind** |",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.85,
+      "importance": 1.0,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "gram.pronoun.personal.nom", "type": "requires", "minMastery": 0.6 }
+      ],
+      "examples": [
+        { "de": "Ich bin müde.", "en": "I am tired.", "note": null },
+        { "de": "Das ist meine Schwester.", "en": "That is my sister.", "note": null },
+        { "de": "Seid ihr aus Berlin?", "en": "Are you (all) from Berlin?", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Ich bin ein Lehrer.",
+          "right": "Ich bin Lehrer.",
+          "explanation": "Professions after 'sein' take no article in German.",
+          "errorCode": "err.article.profession"
+        }
+      ],
+      "requiredVocabulary": ["sein", "müde", "die Schwester", "der Lehrer", "aus"]
+    },
+    {
+      "code": "gram.verb.praesens.regular",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Regular verbs in the present tense",
+      "learningObjective": "Conjugate regular verbs like wohnen, kommen, lernen in the present.",
+      "explanationMarkdown": "Stem + ending: ich **-e**, du **-st**, er/sie/es **-t**, wir **-en**, ihr **-t**, sie/Sie **-en**.\n\n*wohnen*: ich wohn**e**, du wohn**st**, er wohn**t**, wir wohn**en**, ihr wohn**t**, sie wohn**en**.",
+      "estimatedMinutes": 10,
+      "masteryThreshold": 0.85,
+      "importance": 1.0,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "gram.pronoun.personal.nom", "type": "requires", "minMastery": 0.6 }
+      ],
+      "examples": [
+        { "de": "Ich wohne in Hamburg.", "en": "I live in Hamburg.", "note": null },
+        { "de": "Kommst du aus Italien?", "en": "Do you come from Italy?", "note": null },
+        { "de": "Sie lernen zusammen Deutsch.", "en": "They learn German together.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "du wohnt",
+          "right": "du wohnst",
+          "explanation": "2nd person singular takes -st: du wohnst.",
+          "errorCode": "err.verb.conjugation-ending"
+        }
+      ],
+      "requiredVocabulary": ["wohnen", "kommen", "lernen", "machen", "heißen", "in", "zusammen"]
+    },
+    {
+      "code": "gram.wordorder.v2",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Verb-second word order",
+      "learningObjective": "Keep the conjugated verb in second position in statements.",
+      "explanationMarkdown": "In a German statement the conjugated verb is always the **second element** — the first can be the subject, a time phrase or anything else:\n\n- **Ich** *lerne* heute Deutsch.\n- **Heute** *lerne* ich Deutsch. (subject moves behind the verb!)",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.85,
+      "importance": 1.0,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "gram.verb.praesens.regular", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Heute lerne ich Deutsch.", "en": "Today I am learning German.", "note": "time first → verb stays second" },
+        { "de": "Morgen kommt meine Mutter.", "en": "Tomorrow my mother is coming.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Heute ich lerne Deutsch.",
+          "right": "Heute lerne ich Deutsch.",
+          "explanation": "The conjugated verb must stay in position 2; the subject moves after it when something else comes first.",
+          "errorCode": "err.wordorder.v2"
+        }
+      ],
+      "requiredVocabulary": ["heute", "morgen", "die Mutter", "das Deutsch"]
+    },
+    {
+      "code": "gram.question.wfragen",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "W-questions",
+      "learningObjective": "Ask open questions with wer, was, wo, woher, wie, wann.",
+      "explanationMarkdown": "Question word first, verb second, subject third:\n\n- **Wo** *wohnst* du?\n- **Woher** *kommen* Sie?\n- **Wie** *heißt* du?",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.8,
+      "importance": 0.9,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "gram.wordorder.v2", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Wo wohnst du?", "en": "Where do you live?", "note": null },
+        { "de": "Woher kommen Sie?", "en": "Where do you come from?", "note": "wo = where, woher = where from" },
+        { "de": "Wann beginnt der Kurs?", "en": "When does the course start?", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Wo kommst du?",
+          "right": "Woher kommst du?",
+          "explanation": "Origin asks 'woher' (where from); 'wo' asks for a location.",
+          "errorCode": "err.question.wo-woher"
+        }
+      ],
+      "requiredVocabulary": ["wer", "was", "wo", "woher", "wie", "wann", "beginnen", "der Kurs"]
+    },
+    {
+      "code": "func.introduce.self",
+      "kind": "function",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Introducing yourself",
+      "learningObjective": "Say your name, origin, home and occupation in connected sentences.",
+      "explanationMarkdown": "The classic four: **Ich heiße** … / **Ich komme aus** … / **Ich wohne in** … / **Ich bin** … (profession, no article).",
+      "estimatedMinutes": 6,
+      "masteryThreshold": 0.75,
+      "importance": 0.9,
+      "unit": "a1.1-u1",
+      "dependencies": [
+        { "prerequisite": "gram.verb.sein.praesens", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "gram.verb.praesens.regular", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "func.greeting.basic", "type": "supports" }
+      ],
+      "examples": [
+        { "de": "Ich heiße Lena und komme aus Polen.", "en": "My name is Lena and I come from Poland.", "note": null },
+        { "de": "Ich wohne jetzt in München und bin Studentin.", "en": "I live in Munich now and am a student.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Ich heiße ist Lena.",
+          "right": "Ich heiße Lena.",
+          "explanation": "'heißen' is a full verb — no extra 'ist'.",
+          "errorCode": "err.verb.double-verb"
+        }
+      ],
+      "requiredVocabulary": ["heißen", "der Name", "jetzt", "der Student", "arbeiten"]
+    },
+    {
+      "code": "gram.gender.articles.def",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Definite articles: der, die, das",
+      "learningObjective": "Use the correct definite article and learn nouns together with their gender.",
+      "explanationMarkdown": "Every German noun has a gender: **der** (masculine), **die** (feminine), **das** (neuter). Plural is always **die**. Gender is mostly arbitrary — always learn *der Tisch*, never just *Tisch*.\n\nHelpful patterns: **-ung, -heit, -keit → die**; **-chen, -lein → das**.",
+      "estimatedMinutes": 10,
+      "masteryThreshold": 0.8,
+      "importance": 1.0,
+      "unit": "a1.1-u2",
+      "dependencies": [],
+      "examples": [
+        { "de": "Der Tisch ist neu.", "en": "The table is new.", "note": "masculine" },
+        { "de": "Die Lampe ist alt.", "en": "The lamp is old.", "note": "feminine" },
+        { "de": "Das Kind spielt.", "en": "The child is playing.", "note": "neuter" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "die Mädchen (singular)",
+          "right": "das Mädchen",
+          "explanation": "Words in -chen are always neuter, even 'girl': das Mädchen.",
+          "errorCode": "err.gender.wrong-article"
+        }
+      ],
+      "requiredVocabulary": ["der Tisch", "die Lampe", "das Kind", "das Mädchen", "neu", "alt", "spielen"]
+    },
+    {
+      "code": "gram.gender.articles.indef",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Indefinite articles: ein, eine",
+      "learningObjective": "Use ein/eine for unspecific things and know that plurals take no article.",
+      "explanationMarkdown": "**ein** (der/das words), **eine** (die words). There is no plural of 'ein': *Das sind Bücher.*",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.8,
+      "importance": 1.0,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.gender.articles.def", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Das ist ein Stuhl.", "en": "That is a chair.", "note": "der Stuhl → ein" },
+        { "de": "Ich brauche eine Tasche.", "en": "I need a bag.", "note": "die Tasche → eine" },
+        { "de": "Das sind Äpfel.", "en": "Those are apples.", "note": "no plural article" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Das sind eine Bücher.",
+          "right": "Das sind Bücher.",
+          "explanation": "'ein/eine' has no plural form — plural indefinite nouns stand alone.",
+          "errorCode": "err.article.indef-plural"
+        }
+      ],
+      "requiredVocabulary": ["der Stuhl", "die Tasche", "das Buch", "der Apfel", "brauchen"]
+    },
+    {
+      "code": "gram.noun.plural.common",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 3,
+      "title": "Common plural forms",
+      "learningObjective": "Recognize and form the most frequent plural patterns.",
+      "explanationMarkdown": "Main patterns: **-e** (Tisch → Tische), **-(e)n** (Lampe → Lampen), **-er** + umlaut (Kind → Kinder), **-s** (Auto → Autos), umlaut only (Apfel → Äpfel). Learn the plural with each noun.",
+      "estimatedMinutes": 10,
+      "masteryThreshold": 0.75,
+      "importance": 0.8,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.gender.articles.def", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Zwei Tische, drei Lampen, vier Kinder.", "en": "Two tables, three lamps, four children.", "note": null },
+        { "de": "Die Äpfel sind rot.", "en": "The apples are red.", "note": "umlaut plural" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "die Kinds",
+          "right": "die Kinder",
+          "explanation": "-s plurals are rare (mostly loanwords); Kind takes -er.",
+          "errorCode": "err.noun.plural-form"
+        }
+      ],
+      "requiredVocabulary": ["das Auto", "zwei", "drei", "vier", "rot"]
+    },
+    {
+      "code": "gram.verb.haben.praesens",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "haben — to have (present)",
+      "learningObjective": "Conjugate 'haben' and use it to talk about possessions.",
+      "explanationMarkdown": "| | |\n|---|---|\n| ich **habe** | wir **haben** |\n| du **hast** | ihr **habt** |\n| er/sie/es **hat** | sie/Sie **haben** |\n\nNote du **hast** and er **hat** lose the -b-.",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.85,
+      "importance": 1.0,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.verb.praesens.regular", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Ich habe eine Frage.", "en": "I have a question.", "note": null },
+        { "de": "Hast du Zeit?", "en": "Do you have time?", "note": null },
+        { "de": "Er hat zwei Brüder.", "en": "He has two brothers.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "du habst",
+          "right": "du hast",
+          "explanation": "'haben' is irregular in du/er forms: du hast, er hat.",
+          "errorCode": "err.verb.conjugation-ending"
+        }
+      ],
+      "requiredVocabulary": ["haben", "die Frage", "die Zeit", "der Bruder"]
+    },
+    {
+      "code": "gram.case.akkusativ.intro",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 3,
+      "title": "Accusative case (introduction)",
+      "learningObjective": "Mark the direct object: der → den, ein → einen (masculine only).",
+      "explanationMarkdown": "The direct object stands in the **Akkusativ**. Only masculine articles change:\n\n| | Nominativ | Akkusativ |\n|---|---|---|\n| m | der / ein | **den / einen** |\n| f | die / eine | die / eine |\n| n | das / ein | das / ein |",
+      "estimatedMinutes": 10,
+      "masteryThreshold": 0.8,
+      "importance": 1.0,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.gender.articles.indef", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "gram.verb.haben.praesens", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Ich habe einen Hund.", "en": "I have a dog.", "note": "der Hund → einen Hund" },
+        { "de": "Sie kauft den Tisch.", "en": "She buys the table.", "note": null },
+        { "de": "Wir haben eine Katze.", "en": "We have a cat.", "note": "feminine: unchanged" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Ich habe ein Hund.",
+          "right": "Ich habe einen Hund.",
+          "explanation": "Masculine direct objects take -en: einen Hund.",
+          "errorCode": "err.case.akk-masculine"
+        }
+      ],
+      "requiredVocabulary": ["der Hund", "die Katze", "kaufen", "sehen", "essen"]
+    },
+    {
+      "code": "gram.negation.nicht-kein",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 3,
+      "title": "Negation: nicht and kein",
+      "learningObjective": "Negate verbs and adjectives with 'nicht' and nouns with 'kein/keine'.",
+      "explanationMarkdown": "**kein/keine** negates nouns with ein or no article: *Ich habe **kein** Auto.* **nicht** negates everything else: *Ich komme **nicht**.* / *Das ist **nicht** teuer.*",
+      "estimatedMinutes": 10,
+      "masteryThreshold": 0.8,
+      "importance": 0.9,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.wordorder.v2", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "gram.gender.articles.indef", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [
+        { "de": "Ich habe kein Auto.", "en": "I don't have a car.", "note": "noun → kein" },
+        { "de": "Er kommt heute nicht.", "en": "He is not coming today.", "note": "verb → nicht" },
+        { "de": "Das ist keine gute Idee.", "en": "That is not a good idea.", "note": null }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Ich habe nicht Auto.",
+          "right": "Ich habe kein Auto.",
+          "explanation": "Nouns with ein/no article are negated with kein, not nicht.",
+          "errorCode": "err.negation.nicht-vs-kein"
+        }
+      ],
+      "requiredVocabulary": ["nicht", "kein", "teuer", "die Idee"]
+    },
+    {
+      "code": "gram.question.janein",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 2,
+      "title": "Yes/no questions",
+      "learningObjective": "Form questions by putting the verb first; answer with ja, nein or doch.",
+      "explanationMarkdown": "Verb first, subject second: *Kommst du mit?* — **Ja./Nein.** After a negative question, **doch** contradicts: *Hast du kein Geld?* — *Doch!* (Yes, I do!)",
+      "estimatedMinutes": 8,
+      "masteryThreshold": 0.8,
+      "importance": 0.9,
+      "unit": "a1.1-u2",
+      "dependencies": [
+        { "prerequisite": "gram.wordorder.v2", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "gram.negation.nicht-kein", "type": "supports" }
+      ],
+      "examples": [
+        { "de": "Wohnst du in Berlin? — Ja.", "en": "Do you live in Berlin? — Yes.", "note": null },
+        { "de": "Hast du keine Zeit? — Doch!", "en": "Don't you have time? — Yes, I do!", "note": "doch contradicts a negative" }
+      ],
+      "commonMistakes": [
+        {
+          "wrong": "Du kommst mit?",
+          "right": "Kommst du mit?",
+          "explanation": "Yes/no questions start with the conjugated verb (rising intonation alone is colloquial).",
+          "errorCode": "err.wordorder.question-verb-first"
+        }
+      ],
+      "requiredVocabulary": ["ja", "nein", "doch", "das Geld", "mitkommen"]
+    }
+  ]
+}

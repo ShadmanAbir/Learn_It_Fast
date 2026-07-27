@@ -1,0 +1,54 @@
+# LIF local-first deployment (doc 18 §2).
+# Minimal profile:  docker compose up            → app + Postgres
+# Full profile:     docker compose --profile full up   → adds Redis
+# Speech profile arrives in Phase 4 (whisper/piper images).
+# The LLM stays on the host (LM Studio :1234 / Ollama :11434); the app reaches it via host.docker.internal.
+
+name: lif
+
+services:
+  lif:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: lif:local
+    ports:
+      - "8080:8080"
+    environment:
+      - LIF_MODE=local
+      - ConnectionStrings__Db=Host=db;Database=lif;Username=lif;Password=lif
+      - Ai__Autodetect=true
+    depends_on:
+      db:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - lif-audio:/data/audio
+      - lif-keys:/data/keys
+
+  db:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=lif
+      - POSTGRES_USER=lif
+      - POSTGRES_PASSWORD=lif
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lif -d lif"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - lif-db:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    profiles: ["full"]
+    volumes:
+      - lif-redis:/data
+
+volumes:
+  lif-db:
+  lif-redis:
+  lif-audio:
+  lif-keys:

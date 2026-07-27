@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lif.Api\Lif.Api.csproj" />
+    <!-- Reuses the in-memory port fakes + TestWorld curriculum for full-HTTP tests without a DB -->
+    <ProjectReference Include="..\Lif.Application.Tests\Lif.Application.Tests.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+{
+  "blueprints": [
+    {
+      "kind": "checkpoint",
+      "level": "A1.1",
+      "sections": [
+        { "skill": "grammar", "itemCount": 0, "passPercentage": 120 },
+        { "skill": "telepathy", "itemCount": 4, "passPercentage": 70 }
+      ]
+    }
+  ]
+}

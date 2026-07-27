@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Lif.SharedKernel</RootNamespace>
+  </PropertyGroup>
+</Project>

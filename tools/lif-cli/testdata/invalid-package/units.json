@@ -1,0 +1,22 @@
+{
+  "units": [
+    {
+      "code": "u1",
+      "level": "A1.2",
+      "orderIndex": 0,
+      "title": "Unit One",
+      "description": "…",
+      "lessonTemplates": [
+        { "title": "Lesson", "concepts": ["gram.alpha", "gram.unknown"] }
+      ]
+    },
+    {
+      "code": "u1",
+      "level": "A1.2",
+      "orderIndex": 0,
+      "title": "Unit One Again",
+      "description": "…",
+      "lessonTemplates": []
+    }
+  ]
+}

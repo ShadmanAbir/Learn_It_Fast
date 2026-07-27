@@ -1,0 +1,32 @@
+{
+  "units": [
+    {
+      "code": "a1.1-u1",
+      "level": "A1.1",
+      "orderIndex": 0,
+      "title": "Hallo! Erste Kontakte",
+      "description": "Greet people, introduce yourself, say where you live and ask simple questions.",
+      "cultureNote": "Germans distinguish informal 'du' and formal 'Sie'. When in doubt, use 'Sie' with adults you don't know — switching to 'du' is offered, not assumed.",
+      "lessonTemplates": [
+        { "title": "Hallo und Tschüss", "concepts": ["func.greeting.basic", "cult.anrede.du-sie"] },
+        { "title": "Ich bin Anna", "concepts": ["gram.pronoun.personal.nom", "gram.verb.sein.praesens"] },
+        { "title": "Ich wohne in Berlin", "concepts": ["gram.verb.praesens.regular", "gram.wordorder.v2"] },
+        { "title": "Wer bist du?", "concepts": ["gram.question.wfragen", "func.introduce.self"] }
+      ]
+    },
+    {
+      "code": "a1.1-u2",
+      "level": "A1.1",
+      "orderIndex": 1,
+      "title": "Menschen und Dinge",
+      "description": "Talk about people and everyday things: articles and gender, plurals, having things, and saying no.",
+      "cultureNote": "German nouns are always capitalized — readers rely on it. Learning each noun with its article (der/die/das) from day one pays off for years.",
+      "lessonTemplates": [
+        { "title": "Der, die oder das?", "concepts": ["gram.gender.articles.def"] },
+        { "title": "Ein Haus, eine Lampe", "concepts": ["gram.gender.articles.indef", "gram.noun.plural.common"] },
+        { "title": "Ich habe einen Apfel", "concepts": ["gram.verb.haben.praesens", "gram.case.akkusativ.intro"] },
+        { "title": "Nein, kein Problem!", "concepts": ["gram.negation.nicht-kein", "gram.question.janein"] }
+      ]
+    }
+  ]
+}

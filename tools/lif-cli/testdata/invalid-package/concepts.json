@@ -1,0 +1,45 @@
+{
+  "concepts": [
+    {
+      "code": "gram.alpha",
+      "kind": "grammar",
+      "level": "A1.1",
+      "difficulty": 0,
+      "title": "Alpha",
+      "learningObjective": "…",
+      "explanationMarkdown": "…",
+      "estimatedMinutes": 5,
+      "masteryThreshold": 1.5,
+      "importance": 0.5,
+      "unit": "u1",
+      "dependencies": [
+        { "prerequisite": "gram.beta", "type": "requires", "minMastery": 0.7 }
+      ],
+      "examples": [ { "de": "…", "en": "…", "note": null } ],
+      "commonMistakes": [
+        { "wrong": "x", "right": "y", "explanation": "z", "errorCode": "BAD_CODE" }
+      ],
+      "requiredVocabulary": ["die Tisch", "fehltimlexikon"]
+    },
+    {
+      "code": "gram.beta",
+      "kind": "syntax",
+      "level": "A9.9",
+      "difficulty": 2,
+      "title": "Beta",
+      "learningObjective": "…",
+      "explanationMarkdown": "…",
+      "estimatedMinutes": 5,
+      "masteryThreshold": 0.8,
+      "importance": 0.5,
+      "unit": "u1",
+      "dependencies": [
+        { "prerequisite": "gram.alpha", "type": "requires", "minMastery": 0.7 },
+        { "prerequisite": "gram.alpha", "type": "supports", "minMastery": 0.5 }
+      ],
+      "examples": [],
+      "commonMistakes": [],
+      "requiredVocabulary": []
+    }
+  ]
+}

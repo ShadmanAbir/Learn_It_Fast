@@ -1,0 +1,35 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+artifacts/
+TestResults/
+coverage/
+*.trx
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+coverage-frontend/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+appsettings.*.Local.json
+*.pfx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# Logs & local data
+logs/
+*.log
+/data/

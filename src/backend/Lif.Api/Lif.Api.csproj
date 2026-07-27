@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>Lif.Api</RootNamespace>
+    <UserSecretsId>lif-api</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Composition root: the only place Infrastructure + Persistence meet (rule 3) -->
+    <ProjectReference Include="..\Lif.Application\Lif.Application.csproj" />
+    <ProjectReference Include="..\Lif.Infrastructure\Lif.Infrastructure.csproj" />
+    <ProjectReference Include="..\Lif.Persistence\Lif.Persistence.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="AspNetCore.HealthChecks.NpgSql" />
+  </ItemGroup>
+</Project>

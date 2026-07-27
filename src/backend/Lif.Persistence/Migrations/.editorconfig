@@ -1,0 +1,5 @@
+# EF Core migrations are generated code — exempt from analyzer rules (e.g. CA1861 on
+# the scaffolded string[] index arguments). Hand-written persistence code stays strict.
+[*.cs]
+generated_code = true
+dotnet_analyzer_diagnostic.severity = none
